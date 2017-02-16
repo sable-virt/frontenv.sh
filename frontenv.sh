@@ -46,6 +46,7 @@ if ! type nodebrew >/dev/null 2>&1; then
   # some code...
   echo 'install nodebrew ...';
   brew install nodebrew
+  mkdir -p ~/.nodebrew/src
 else
     echo 'Nodebrew: OK'
 fi
