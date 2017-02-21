@@ -1,8 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
 REQUIRE_NODE_VERSION="v6.9.5"
 REQUIRE_YARN_VERSION="0.20.3"
 
+set -e
 # remove node old installer
 if [[ -e /var/db/receipts/org.nodejs.pkg.bom ]]; then
     echo 'remove old node packages ...';
