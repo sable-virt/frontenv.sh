@@ -3,6 +3,7 @@
 REQUIRE_NODE_VERSION="v6.9.5"
 REQUIRE_YARN_VERSION="0.20.3"
 
+set -e
 # remove node old installer
 if [[ -e /var/db/receipts/org.nodejs.pkg.bom ]]; then
   echo 'remove old node packages ...';
@@ -82,8 +83,8 @@ fi
 YARN_VERSION="$(yarn --version)"
 echo "$YARN_VERSION"
 if [[ "$YARN_VERSION" != "$REQUIRE_YARN_VERSION" ]]; then
-    echo "install yarn $REQUIRE_YARN_VERSION ..."
-    brew switch yarn $REQUIRE_YARN_VERSION
+  echo "install yarn $REQUIRE_YARN_VERSION ..."
+  brew switch yarn $REQUIRE_YARN_VERSION
 else
-    echo 'Yarn version: OK'
+  echo 'Yarn version: OK'
 fi
