@@ -34,7 +34,6 @@ fi
 
 # homebrew
 if ! type brew >/dev/null 2>&1; then
-  # some code...
   echo 'install homebrew ...';
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
@@ -43,7 +42,6 @@ fi
 
 # nodebrew
 if ! type nodebrew >/dev/null 2>&1; then
-  # some code...
   echo 'install nodebrew ...';
   brew install nodebrew
   mkdir -p ~/.nodebrew/src
@@ -53,7 +51,6 @@ fi
 
 # node
 if ! type node >/dev/null 2>&1; then
-  # some code...
   nodebrew install $REQUIRE_NODE_VERSION
   nodebrew use $REQUIRE_NODE_VERSION
 else
@@ -76,7 +73,6 @@ npm un yarn -g
 
 # yarn
 if ! type yarn >/dev/null 2>&1; then
-  # some code...
   echo 'install yarn ...';
   brew install yarn
 else
