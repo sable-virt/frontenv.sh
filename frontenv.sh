@@ -89,5 +89,5 @@ if [ "$(printf "$REQUIRE_YARN_VERSION\n$YARN_VERSION" | sort -n | head -n1)" == 
   brew upgrade yarn
   echo "yarn version: $(yarn --version)"
 else
-  echo "yarn version: OK ($YARN_VERSION))"
+  echo "yarn version: OK ($YARN_VERSION)"
 fi
